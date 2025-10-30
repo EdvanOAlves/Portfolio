@@ -154,15 +154,42 @@ main{
     gap: 32px;
 }
 
-
-
-
-
 .project-frame{
-    height: 210px;
+    min-height: 210px;
     object-fit: cover;
 }
 
 .projeto{
     gap: 12px;
+}
+
+/* FORMAÇÃO ACADEMICA */
+
+.formacao{
+    display: flex;
+    gap: 10px;
+}
+
+.icon{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+
+.icon img{
+    width: 100%;
+}
+
+.formacao-description{
+    height: 100%;
+    padding-top: 4%;
+}
+
+.formacao-description h3{
+    font-size: 12px;
+}
+
+.formacao-description span{
+    font-size: 10px;
 }
