@@ -13,27 +13,64 @@
 
 <body>
     <header>
-        <h1>Edvan Alves de Oliveira</h1>
+        <h1 class="underlined">Edvan Alves de Oliveira</h1>
         <div class="header-description">
             <h2>Dev Junior</h2>
             <div class="profile-frame framed right-shadow">
-                <img class="framed-fill-right"
+                <img class="contained"
                     src="https://github.com/EdvanOAlves/09-Pesquisa-de-imagem-Javascript/blob/main/img/Watermelon.png?raw=true"
                     alt="">
             </div>
         </div>
     </header>
 
-    <section class="welcome">
-        <div class="greeting framed left-shadow">
-            <span class = "dialog">Opa, tudo bom? Sou Edvan, estudante de Desenvolvimento de Sistemas</span>
-        </div>
-        <div class="greeting framed left-shadow">
-            <span class = "dialog">Estudando de tudo e mais um pouco, sempre buscando aprender e explorar novas formas de criar.</span>
-        </div>
-    </section>
-
     <main>
+        <section class="welcome flex-col">
+            <img class="sprite" src="./img_layout/PixelMelon.svg" alt="">
+            <div class="greeting framed left-fill">
+                <span class="dialog">Opa, tudo bom? Sou Edvan, estudante de Desenvolvimento de Sistemas</span>
+            </div>
+            <div class="greeting framed left-fill">
+                <span class="dialog">Estudando de tudo e mais um pouco, sempre buscando aprender e explorar novas formas
+                    de criar.</span>
+            </div>
+        </section>
+
+        <section class="habilidades flex-col">
+            <h2 class="underlined">Habilidades</h2>
+            <div class="skill-set">
+                <h3 class="skill-group"> Front-End</h3>
+                <ul class="skill-list">
+                    <li class="skill cast-left"> <span>HTML</span></li>
+                    <li class="skill cast-left"> <span>CSS</span></li>
+                    <li class="skill cast-left"> <span>Javascript</span></li>
+                    <li class="skill cast-left"> <span>Tailwind</span></li>
+                </ul>
+            </div>
+
+            <!--  -->
+            <div class="skill-set">
+                <h3 class="skill-group"> Back-End</h3>
+                <ul class="skill-list">
+                    <li class="skill cast-left"> <span>Java</span></li>
+                    <li class="skill cast-left"> <span>MySQL</span></li>
+                    <li class="skill cast-left"> <span>Node.js</span></li>
+                    <li class="skill cast-left"> <span>Prisma</span></li>
+                </ul>
+            </div>
+
+            <div class="skill-set">
+                <h3 class="skill-group"> Recursos</h3>
+                <ul class="skill-list">
+                    <li class="skill cast-left"> <span>Git</span></li>
+                    <li class="skill cast-left"> <span>GitHub</span></li>
+                    <li class="skill cast-left"> <span>Figma</span></li>
+                </ul>
+            </div>
+            <!--  -->
+        </section>
+
+
 
     </main>
     <footer>
