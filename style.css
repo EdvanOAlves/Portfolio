@@ -71,12 +71,11 @@ body{
 
 h1{ 
     font-size: 20px;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 h2{
     font-size: 20px;
-    font-weight: normal;
 }
 
 .header-description{
@@ -149,3 +148,21 @@ main{
     color: var(--col-dark);
 }
 
+/* PROJETOS */
+
+.projetos{
+    gap: 32px;
+}
+
+
+
+
+
+.project-frame{
+    height: 210px;
+    object-fit: cover;
+}
+
+.projeto{
+    gap: 12px;
+}
