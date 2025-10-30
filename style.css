@@ -6,35 +6,68 @@
     color: #EEE;
 }
 :root{
+    --col-dark:#111;
+    --col-light: #eee;
 }
-/* Classes reutilizaveis */
+
+/*                       */
+/* CLASSES REUTILIZÁVEIS */
+/*                       */
 
 .framed{
     border-style: solid;
-    border-color: white;
+    border-color: var(--col-light);
     border-width: 4px;
 }
 
 .right-shadow{
-    box-shadow: 8px 8px 0px #fff;
+    box-shadow: 8px 8px 0px var(--col-light);
     /* TODO: Tirar o fill dessa sombra */
 }
 
 .left-shadow{
-    box-shadow: -8px 8px 0px #fff;
+    box-shadow: -8px 8px 0px var(--col-light);
     /* TODO: Tirar o fill dessa sombra */
 }
+.left-fill{
+    box-shadow: -8px 8px 0px var(--col-light);
+}
 
-/* Formatação por níveis */
+.cast-left{
+    /* TODO: Tirar o fill dessa projeção */
+    box-shadow: -8px -8px 0px var(--col-light);}
+
+.underlined{
+    /* Placeholder */
+    text-decoration: underline;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Para imagens */
+.contained{
+    width: 100%;
+    max-height: 100%;
+}
+
+/*                       */
+/* FORMATAÇÃO EM NÍVEIS  */
+/*                       */
+
+
 
 body{
-    background-color: #111;
+    background-color: var(--col-dark);
     padding: 32px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
+/* HEADER */
 
 h1{ 
     font-size: 20px;
@@ -47,7 +80,7 @@ h2{
 }
 
 .header-description{
-    padding-top: 16px;
+    padding-top: 12px;
     display: flex;
     justify-content: space-between;
 }
@@ -57,17 +90,62 @@ h2{
     object-fit: cover;
 }
 
-img{
-    width: 100%;
-}
 
-
-.welcome{
+/* MAIN */
+main{
     display: flex;
     flex-direction: column;
-    gap:26px
+    gap: 48px;
+
+}
+
+/* TEXTOS DESCRITIVOS */
+
+.welcome{
+    gap:26px;
+    position: relative
+}
+
+.sprite{
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
 }
 
 .greeting{
     padding: 16px;
 }
+
+/* HABILIDADES */
+
+.habilidades{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.skill-set{
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.skill-list{
+    display: flex;
+    list-style:none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill{
+    background-color: var(--col-light);
+    
+    font-size: 16px;
+    padding: 9px;
+}
+
+.skill span{
+    font-weight: bold;
+    color: var(--col-dark);
+}
+
