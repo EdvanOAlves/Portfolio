@@ -70,10 +70,13 @@ body{
 
 header{
     padding: 32px;
-    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
 }
 
-h1{ 
+h1{
+    grid-column: 1 / span 2; 
     font-size: 20px;
     font-weight: bold;
 }
@@ -110,13 +113,21 @@ main{
     position: relative
 }
 
-.sprite{
+.sprite-greeting{
     position: absolute;
     bottom: 100%;
     left: 10%;
 }
 
 .greeting{
+    padding: 16px;
+}
+
+.sprite-about{
+    display: none;
+}
+
+.about{
     padding: 16px;
 }
 
@@ -249,3 +260,69 @@ footer{
 }
 
 
+/* VERSÃO DESKTOP */
+/* Conferir questão do min-width */
+@media (min-width: 844px){
+    body{
+        gap: 20px;
+    }
+    
+    /* HEADER */
+    header{
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        gap: 16px;
+
+    }
+    header h1{
+        grid-row: 1;
+        grid-column: span 1;
+        
+        font-size: 36px;
+    }
+    header h2{
+        grid-row: 2;
+        
+        font-size:36px
+    }
+    .profile-frame{
+        grid-row: 1 / span 2;
+        width: 100%;
+        aspect-ratio: 1 /1;
+    }
+
+    /* MAIN */
+    main{
+        padding-top: 0;
+    }
+
+    /* WELCOME */
+    .sprite-greeting{
+        display: none;
+    }
+    
+    .welcome{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .sprite-about{
+        display: block;
+        position: absolute;
+        margin-bottom: 4px;
+        bottom: 100%; 
+        right: 10%;
+
+    }
+
+    .about{
+        position: relative;
+        grid-row: 2;
+        grid-column: span 2
+    }
+
+    .dialog{
+        font-size: 1.5rem;
+    }
+}
