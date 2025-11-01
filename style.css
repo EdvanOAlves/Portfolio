@@ -214,3 +214,25 @@ main{
     flex-grow: 6;
 }
 
+/* FOOTER */
+
+footer{
+    background-color: black;
+    width: 100%;
+    padding-block: 12px;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    gap: 16px;
+}
+
+.footer-content p{
+    font-size: 14px;
+}
+
+.footer-content img{
+    width: 30px;
+}
