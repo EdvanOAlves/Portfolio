@@ -200,3 +200,17 @@ main{
     font-size: 10px;
 }
 
+/* CONTATO */
+
+.link-contato{
+    display: flex;
+    align-items: center;
+}
+
+.link-contato .icon{
+    width: 55px;
+}
+.link-contato h3{
+    flex-grow: 6;
+}
+
