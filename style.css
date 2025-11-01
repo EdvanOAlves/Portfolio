@@ -155,7 +155,7 @@ main{
 
 /* PROJETOS */
 
-.projetos{
+section{
     gap: 32px;
 }
 
@@ -202,15 +202,22 @@ main{
 
 /* CONTATO */
 
+
+
 .link-contato{
     display: flex;
     align-items: center;
+    place-content: center;
+    gap: 16px;
 }
 
 .link-contato .icon{
+    display: flex;
+    align-items: center;
     width: 55px;
 }
 .link-contato h3{
+    font-size: 20px;
     flex-grow: 6;
 }
 
