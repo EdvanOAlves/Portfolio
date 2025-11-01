@@ -243,3 +243,9 @@ footer{
 .footer-content img{
     width: 30px;
 }
+
+.footer-bird{
+    transform: scaleX(-1);
+}
+
+
