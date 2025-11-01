@@ -61,13 +61,17 @@
 
 body{
     background-color: var(--col-dark);
-    padding: 32px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
 /* HEADER */
+
+header{
+    padding: 32px;
+    
+}
 
 h1{ 
     font-size: 20px;
@@ -95,7 +99,8 @@ main{
     display: flex;
     flex-direction: column;
     gap: 48px;
-
+    
+    padding: 32px;
 }
 
 /* TEXTOS DESCRITIVOS */
@@ -170,8 +175,8 @@ main{
     gap: 10px;
 }
 
-.icon{
-    width: 25%;
+.formacao .icon{
+    flex-grow: 1;
     display: flex;
     align-items: center;
     place-content: center;
@@ -184,6 +189,7 @@ main{
 .formacao-description{
     height: 100%;
     padding-top: 4%;
+    flex-grow: 4;
 }
 
 .formacao-description h3{
@@ -193,3 +199,4 @@ main{
 .formacao-description span{
     font-size: 10px;
 }
+
