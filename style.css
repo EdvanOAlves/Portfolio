@@ -121,6 +121,7 @@ header {
     padding: 32px;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
     gap: 25px;
 }
 
@@ -139,6 +140,7 @@ h1 {
 
 .profile-frame {
     width: 116px;
+    max-height: fit-content;
     object-fit: cover;
 }
 
@@ -200,8 +202,9 @@ section {
 .skill-list {
     display: flex;
     list-style: none;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 8px;
 }
 
 .skill {
@@ -237,15 +240,14 @@ section {
 }
 
 .formacao .icon {
-    flex-grow: 1;
     display: flex;
     align-items: center;
     place-content: center;
-    max-width: 64px;
+    height: 64px;
 }
 
-.icon img {
-    width: 100%;
+.formacao .icon img {
+    height: 100%;
 }
 
 .formacao-description {
@@ -279,6 +281,10 @@ section {
     display: flex;
     align-items: center;
     width: 40px;
+}
+
+.link-contato .icon img{
+    width: 100%;
 }
 
 .link-contato h3 {
@@ -317,13 +323,13 @@ footer {
 /* VERSÃO TABLET */
 @media (min-width: 768px) {
     .framed {
-        border-width: 7px;
+        border-width: 5px;
     }
 
     .right-shadow::before {
         top: 14px;
         left: 14px;
-        border-width: 7px;
+        border-width: 5px;
     }
 
     /* TODO: Ativar quando importar as imagens */
@@ -359,7 +365,7 @@ footer {
     }
 
     h3 {
-        font-size: 36px;
+        font-size: 24px;
     }
 
     /*                       */
@@ -374,7 +380,6 @@ footer {
     /* HEADER */
     header {
         grid-template-columns: 3fr 1fr;
-        grid-template-rows: auto;
         gap: 16px;
 
         padding: 5%;
@@ -384,12 +389,12 @@ footer {
         grid-row: 1;
         grid-column: span 1;
 
-        font-size: 42px;
+        font-size: 40px;
     }
 
     header h2 {
         grid-row: 2;
-        font-size: 42px;
+        font-size: 36px;
 
     }
 
@@ -397,7 +402,7 @@ footer {
         grid-row: 1 / span 2;
         justify-self: end;
         width: 100%;
-        max-width: 400px;
+        max-width: 200px;
         aspect-ratio: 1 /1;
     }
 
@@ -435,7 +440,7 @@ footer {
     }
 
     .dialog {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     /* Habilidades */
@@ -444,7 +449,7 @@ footer {
     }
 
     .skill {
-        font-size: 24px
+        font-size: 16px
     }
 
     /* Projetos */
@@ -472,16 +477,17 @@ footer {
         gap: 24px
     }
 
-    .formacao .icon {
-        max-width: 128px;
-    }
-
     .formacao-description h3 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .formacao-description span {
-        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .formacao .icon{
+        height: 100%;
+        width: auto;
     }
 
     /* Contato */
@@ -490,21 +496,21 @@ footer {
     }
 
     .link-contato {
-        gap: 42px;
+        gap: 16px;
     }
 
     .link-contato .icon {
-        width: 72px;
+        height: 100%;
     }
 
     .link-contato h3 {
-        font-size: 32px;
+        font-size: 20px;
     }
 
     /* FOOTER */
 
     footer {
-        padding-block: 18px;
+        padding-block: 8px;
     }
 
     .footer-content {
@@ -512,11 +518,11 @@ footer {
     }
 
     .footer-content p {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .footer-content img {
-        width: 48px;
+        width: 24px;
     }
 }
 
@@ -527,7 +533,7 @@ footer {
 */
 @media (min-width: 1000px) {
     header {
-        grid-template-rows: 1fr 3fr;
+        grid-template-rows: auto auto;
     }
 
     .welcome {
