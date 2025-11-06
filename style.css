@@ -9,6 +9,7 @@
 :root {
     --col-dark: #111;
     --col-light: #eee;
+    --col-hover: #9994;
 }
 
 /*                       */
@@ -494,8 +495,20 @@ footer {
     .contacts {
         gap: 32px;
     }
-
+    
+    .contacts a{
+        width: fit-content;
+        border-radius: 4px;
+    }
+    
+    .contacts a:hover{
+        background-color: var(--col-hover);
+        transition: 400ms;
+    }
+    
     .link-contato {
+        padding-left: 4px;
+        padding-right: 12px;
         gap: 16px;
     }
 
