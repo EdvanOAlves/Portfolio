@@ -1,12 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'orbit';
     color: #EEE;
 }
-:root{
-    --col-dark:#111;
+
+:root {
+    --col-dark: #111;
     --col-light: #eee;
 }
 
@@ -14,28 +15,29 @@
 /* CLASSES REUTILIZÁVEIS */
 /*                       */
 
-.framed{
+.framed {
     border-style: solid;
     border-width: 3px;
     border-color: var(--col-light);
 }
 
-.right-shadow{
+.right-shadow {
     position: relative;
     /* TODO: Tirar o fill dessa sombra */
 }
-.right-shadow::before{
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 100%;
-  height: 100%;
-  border: 3px solid var(--col-light);
-  z-index: -1;
+
+.right-shadow::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--col-light);
+    z-index: -1;
 }
 
-.left-shadow{
+.left-shadow {
     box-shadow: -8px 8px 0px var(--col-light);
     position: relative;
 }
@@ -53,48 +55,52 @@
 } */
 
 
-.left-fill{
+.left-fill {
     box-shadow: -8px 8px 0px var(--col-light);
 }
 
-.left-cast{
+.left-cast {
     border: 3px solid var(--col-light);
     position: relative;
 }
-.left-cast::before{
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  width: 100%;
-  height: 100%;
-  border: 3px solid var(--col-light);
-  z-index: -1;
+
+.left-cast::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--col-light);
+    z-index: -1;
 }
 
-.underlined{
+.underlined {
     /* Placeholder */
     text-decoration: underline;
 }
 
-.clickable:hover{
+.clickable:hover {
     cursor: pointer;
 
 }
 
-.flex-col{
+.flex-col {
     display: flex;
     flex-direction: column;
 }
 
 /* Para imagens */
-.contained{
+.contained {
     width: 100%;
     max-height: 100%;
     display: block;
     text-align: center;
 }
 
+.pixelated {
+    image-rendering: pixelated;
+}
 
 /*                       */
 /* FORMATAÇÃO EM NÍVEIS  */
@@ -102,7 +108,7 @@
 
 
 
-body{
+body {
     background-color: var(--col-dark);
     display: flex;
     flex-direction: column;
@@ -111,27 +117,27 @@ body{
 
 /* HEADER */
 
-header{
+header {
     padding: 32px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 25px;
 }
 
-h1{
-    grid-column: 1 / span 2; 
-    font-size: 20px;
+h1 {
+    grid-column: 1 / span 2;
+    font-size: 24px;
     font-weight: bold;
 }
 
 
-.header-description{
+.header-description {
     padding-top: 12px;
     display: flex;
     justify-content: space-between;
 }
 
-.profile-frame{
+.profile-frame {
     width: 116px;
     object-fit: cover;
 }
@@ -139,97 +145,98 @@ h1{
 
 
 /* MAIN */
-main{
+main {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    
+
     padding: 32px;
 }
 
-section{
+section {
     gap: 32px;
 }
 
 /* TEXTOS DESCRITIVOS */
 
-.welcome{
-    gap:26px;
+.welcome {
+    gap: 26px;
     position: relative
 }
 
-.sprite-greeting{
+.sprite-greeting {
     position: absolute;
     bottom: 100%;
     left: 10%;
+    width: 50px;
 }
 
-.greeting{
+.greeting {
     padding: 16px;
 }
 
-.sprite-about{
+.sprite-about {
     display: none;
 }
 
-.about{
+.about {
     padding: 16px;
 }
 
 /* HABILIDADES */
 
-.habilidades{
+.habilidades {
     display: flex;
     flex-direction: column;
-    gap:16px;
+    gap: 16px;
 }
 
-.skill-set{
+.skill-set {
     display: flex;
     flex-direction: column;
     gap: 16px
 }
 
-.skill-list{
+.skill-list {
     display: flex;
-    list-style:none;
+    list-style: none;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.skill{
+.skill {
     background-color: var(--col-light);
-    
+
     font-size: 16px;
     padding: 9px;
 }
 
 
-.skill span{
+.skill span {
     font-weight: bold;
     color: var(--col-dark);
 }
 
 /* PROJETOS */
 
-.project-frame{
+.project-frame {
     min-height: 210px;
     object-fit: cover;
 }
 
-.projeto{
+.projeto {
     gap: 12px;
 }
 
 /* FORMAÇÃO ACADEMICA */
 
-.formacao{
+.formacao {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.formacao .icon{
+.formacao .icon {
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -237,171 +244,293 @@ section{
     max-width: 64px;
 }
 
-.icon img{
+.icon img {
     width: 100%;
 }
 
-.formacao-description{
+.formacao-description {
     height: 100%;
     flex-grow: 4;
 }
 
-.formacao-description h3{
+.formacao-description h3 {
     font-size: 14px;
     font-weight: normal;
 }
 
-.formacao-description span{
+.formacao-description span {
     font-size: 12px;
 }
 
 /* CONTATO */
 
-.contacts{
+.contacts {
     gap: 14px;
 }
 
-.link-contato{
+.link-contato {
     display: flex;
     align-items: center;
     place-content: center;
     gap: 16px;
 }
 
-.link-contato .icon{
+.link-contato .icon {
     display: flex;
     align-items: center;
     width: 40px;
 }
-.link-contato h3{
+
+.link-contato h3 {
     font-size: 14px;
     flex-grow: 6;
 }
 
 /* FOOTER */
 
-footer{
+footer {
     background-color: black;
     width: 100%;
     padding-block: 12px;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     align-items: center;
     place-content: center;
     gap: 16px;
 }
 
-.footer-content p{
+.footer-content p {
     font-size: 14px;
 }
 
-.footer-content img{
+.footer-content img {
     width: 30px;
 }
 
-.footer-bird{
+.footer-bird {
     transform: scaleX(-1);
 }
 
 
-/* VERSÃO DESKTOP */
-/* Conferir questão do min-width */
-@media (min-width: 768px){
-    
-    body{
+/* VERSÃO TABLET */
+@media (min-width: 768px) {
+    .framed {
+        border-width: 7px;
+    }
+
+    .right-shadow::before {
+        top: 14px;
+        left: 14px;
+        border-width: 7px;
+    }
+
+    /* TODO: Ativar quando importar as imagens */
+    /* .left-shadow::before{
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--col-light);
+    z-index: -1;
+    } */
+
+
+    .left-fill {
+        box-shadow: -10px 10px 0px var(--col-light);
+    }
+
+    .left-cast {
+        border: 3px solid var(--col-light);
+        position: relative;
+    }
+
+    .left-cast::before {
+        bottom: 5px;
+        right: 5px;
+        border-width: 4px
+    }
+
+    h2 {
+        font-size: 36px
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+
+    /*                       */
+    /* FORMATAÇÃO EM NÍVEIS  */
+    /*                       */
+
+    body {
         gap: 20px;
     }
-    /* Redefinindo Elementos para novo tamanho */
-    h2{
-        font-size:36px
-    }
-    h3{
-        font-size: 36px;
-    }
-    
+
+
     /* HEADER */
-    header{
+    header {
         grid-template-columns: 3fr 1fr;
-        grid-template-rows: 1fr 3fr;
+        grid-template-rows: auto;
         gap: 16px;
 
-    }
-    header h1{
-        grid-row: 1;
-        grid-column: span 1;
-        
-        font-size: 36px;
-    }
-    
-    header h2{
-        grid-row: 2;
-        
+        padding: 5%;
     }
 
-    .profile-frame{
+    header h1 {
+        grid-row: 1;
+        grid-column: span 1;
+
+        font-size: 42px;
+    }
+
+    header h2 {
+        grid-row: 2;
+        font-size: 42px;
+
+    }
+
+    .profile-frame {
         grid-row: 1 / span 2;
+        justify-self: end;
         width: 100%;
+        max-width: 400px;
         aspect-ratio: 1 /1;
     }
 
     /* MAIN */
-    main{
+    main {
         padding-top: 0;
+        padding-left: 5%;
+        gap: 86px;
     }
 
     /* WELCOME */
-    .sprite-greeting{
+    .sprite-greeting {
         display: none;
     }
-    
-    .welcome{
+
+    .welcome {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto auto;
     }
-    
-    .sprite-about{
+
+    .sprite-about {
         display: block;
         position: absolute;
         margin-bottom: 4px;
-        bottom: 100%; 
+        bottom: 100%;
         right: 10%;
-
+        width: 50px;
     }
 
-    .about{
+    .about {
         position: relative;
         grid-row: 2;
         grid-column: span 2
     }
 
-    .dialog{
-        font-size: 1.5rem;
+    .dialog {
+        font-size: 36px;
     }
+
     /* Habilidades */
-    .skill{
+    .skill-list {
+        gap: 28px
+    }
+
+    .skill {
         font-size: 24px
     }
 
     /* Projetos */
 
-    .projeto{
+    .projeto {
         flex-direction: row;
         gap: 80px;
     }
-    .projeto a{
+
+    .projeto a {
         width: 50%;
-        
+
     }
 
-    .project-description{
+    .project-description {
         width: 50%;
     }
-    .project-description span{
+
+    .project-description span {
         font-size: 20px;
     }
 
     /* Formação academica */
+    .formacao {
+        gap: 24px
+    }
+
+    .formacao .icon {
+        max-width: 128px;
+    }
+
+    .formacao-description h3 {
+        font-size: 36px;
+    }
+
+    .formacao-description span {
+        font-size: 28px;
+    }
+
+    /* Contato */
+    .contacts {
+        gap: 32px;
+    }
+
+    .link-contato {
+        gap: 42px;
+    }
+
+    .link-contato .icon {
+        width: 72px;
+    }
+
+    .link-contato h3 {
+        font-size: 32px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding-block: 18px;
+    }
+
+    .footer-content {
+        gap: 24px;
+    }
+
+    .footer-content p {
+        font-size: 24px;
+    }
+
+    .footer-content img {
+        width: 48px;
+    }
+}
+
+/* Versão Desktop */
+/* 
+    A versão Tablet era a versão desktop, mas pelo ponto cego das resoluções meio termo
+    deixei ela como a versão de tablet com apenas algumas variações para as telas mais largas
+*/
+@media (min-width: 1000px) {
+    header {
+        grid-template-rows: 1fr 3fr;
+    }
+
+    .welcome {
+        width: 78%;
+    }
 }
