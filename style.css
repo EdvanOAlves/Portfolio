@@ -384,6 +384,7 @@ footer {
         gap: 16px;
 
         padding: 5%;
+        padding-bottom: 40px;
     }
 
     header h1 {
@@ -545,9 +546,6 @@ footer {
     deixei ela como a versão de tablet com apenas algumas variações para as telas mais largas
 */
 @media (min-width: 1000px) {
-    header {
-        grid-template-rows: auto auto;
-    }
 
     .welcome {
         width: 78%;
